@@ -5,4 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class TestDemo {
 
+
+    @Test
+    public void test() {
+        System.out.println("111111111111111");
+    }
+
 }

@@ -1,4 +1,4 @@
-package com.haier.zjapplet.common.exception;
+package com.example.demo.common.exception;
 
 
 /**

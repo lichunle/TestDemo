@@ -64,6 +64,7 @@
 	</dependencies>
 	<!-- 可以将应用打包成可执行jar -->
 	<build>
+		<finalName>${project.artifactId}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

@@ -3,6 +3,7 @@ package com.example.demo.common.enums;
 
 import java.util.Objects;
 
+
 public enum TemplateStatus {
 
     ON_LINE("ON_LINE", "上线"),
@@ -16,7 +17,13 @@ public enum TemplateStatus {
         this.desc = desc;
     }
 
-
+    /**
+     * 将String类型的value值解析成枚举类型
+     *
+     * @param code 枚举类型代码
+     * @return 如果输入为空，则返回为null，如果输入不为空且匹配不上，则抛出IllegalArgumentException异常
+     * @throws IllegalArgumentException
+     */
     public static TemplateStatus parseFromCode(String code) throws IllegalArgumentException {
         if (Objects.isNull(code) || 0 == code.trim().length()) {
             return null;

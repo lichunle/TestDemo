@@ -29,6 +29,8 @@ public class SequenceB implements Sequence {
         ClientThread thread2 = new ClientThread(sequence);
         ClientThread thread3 = new ClientThread(sequence);
 
+
+        ClientThread thread4 = new ClientThread(sequence);
         thread1.start();
         thread2.start();
         thread3.start();

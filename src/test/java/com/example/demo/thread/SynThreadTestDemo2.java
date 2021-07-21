@@ -1,6 +1,4 @@
-package com.example.demo;
-
-import java.net.StandardSocketOptions;
+package com.example.demo.thread;
 
 /**
  * @Classname SynThreadDemo2

@@ -13,3 +13,12 @@ spring:
     password: 123456
     url: jdbc:mysql://localhost:3306/zjapp?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
+
+# Elasticsearch
+elasticsearch:
+  rest:
+    uris: 120.24.171.74:9200
+    username:
+    password:
+    connection-timeout: 100
+    max-connection: 100

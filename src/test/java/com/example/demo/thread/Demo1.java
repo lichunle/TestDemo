@@ -1,6 +1,7 @@
 package com.example.demo.thread;
 
 import com.alibaba.fastjson.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +46,9 @@ public class Demo1 {
 //        Runnable
 //        Callable
 //        FutureTask
+
+        Thread t1 = new Thread();
+
     }
 
 //    public static List<Integer> buildList() {

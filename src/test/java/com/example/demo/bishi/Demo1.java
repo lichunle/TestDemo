@@ -39,6 +39,7 @@ public class Demo1 {
         for(int i = 0;i < resultList.size();i++) {
             sBuffer.append(resultList.get(i)).append(",");
         }
+        StringBuffer stringBuffer = new StringBuffer();
         System.out.println(sBuffer.toString().substring(0, sBuffer.length()-1));
     }
 

@@ -7,12 +7,57 @@ server:
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
   type-aliases-package: com.example.demo.bean.model
+
 spring:
-  datasource:
-    username: root
-    password: 123456
-    url: jdbc:mysql://localhost:3306/zjapp?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
-    driver-class-name: com.mysql.cj.jdbc.Driver
+#  datasource:
+#    username: root
+#    password: 123456
+#    url: jdbc:mysql://localhost:3306/mooc?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+#    password: 123456
+    #lettuce连接池
+    lettuce:
+      pool:
+        #最大连接数 默认8 （-1没有限制）
+        max-active: 30
+        #最大空闲连接数 默认8
+        max-idle: 8
+        #最小空闲连接数 默认0
+        min-idle: 0
+        #连接池最大阻塞等待时间 默认-1ms
+        max-wait: -1ms
+  redisson:
+    address: redis://127.0.0.1:6379
+  shardingsphere:
+    datasource:
+      names: ds0
+      ds0:
+        type:  com.zaxxer.hikari.HikariDataSource
+        driver: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://localhost:3306/mooc?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+        username: root
+        password: 123456
+    sharding:
+#      default-database-strategy:
+#        inline:
+#          sharding-column: id
+#          algorithm-expression: ds$->{id % 2}
+      # 具体分表策略
+      # 节点 ds0.t_user_0,ds0.t_user_1
+      tables.t_user:
+        actual-data-nodes: ds0.t_user_$->{0..2}
+        # 分表字段
+        table-strategy.inline.sharding-column: id
+        # 分表策略
+        table-strategy.inline.algorithm-expression: t_user_$->{id % 3}
+        key-generator.column: id
+        key-generator.type: SNOWFLAKE
+    props:
+      sql.show: true
 
 # Elasticsearch
 elasticsearch:

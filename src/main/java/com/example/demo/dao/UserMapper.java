@@ -1,10 +1,15 @@
 package com.example.demo.dao;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.example.demo.bean.model.User;
 import org.springframework.stereotype.Repository;
 
-@Repository
-public interface UserMapper {
+import java.util.List;
 
-    public int insertSelective(User user);
+//@Repository
+public interface UserMapper extends BaseMapper<User> {
+
+//    int insertSelective(User user);
+
+    List<User> queryList();
 }

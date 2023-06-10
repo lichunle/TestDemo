@@ -1,8 +1,13 @@
 package com.example.demo.service;
 
-public interface UserService {
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.example.demo.bean.model.User;
 
-    public void insert();
+import java.util.List;
 
+public interface UserService extends IService<User> {
 
+//    void insert();
+//
+//    List<User> queryList();
 }

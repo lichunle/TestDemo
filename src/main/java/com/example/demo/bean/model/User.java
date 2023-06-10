@@ -1,36 +1,20 @@
 package com.example.demo.bean.model;
 
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
 import java.io.Serializable;
 
+@Data
+@TableName("t_user")
 public class User implements Serializable {
 
     private Long id;
 
     private String userName;
 
-    private String password;
+    private String sex;
 
-    public Long getId() {
-        return id;
-    }
+    private String phone;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 }

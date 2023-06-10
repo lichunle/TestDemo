@@ -37,7 +37,5 @@ public class Person implements Cloneable {
         System.out.println(person1  + "\t" + personCopy);
         System.out.println(person1.getAddress() == personCopy.getAddress());
 
-        Object o = null;
-        String s = "";
     }
 }

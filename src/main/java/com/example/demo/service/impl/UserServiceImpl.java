@@ -5,9 +5,11 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.demo.bean.model.User;
-import com.example.demo.common.utils.RedisCacheUtils;
+//import com.example.demo.common.utils.RedisCacheUtils;
 import com.example.demo.dao.UserMapper;
+import com.example.demo.service.ITaskFinishStrategy;
 import com.example.demo.service.UserService;
+import com.example.demo.service.WardHandlerFactory;
 import org.apache.commons.lang3.StringUtils;
 import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,4 +48,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 //        redisCacheUtils.set(key, JSONObject.toJSONString(users), 60L);
 //        return users;
 //    }
+
+    public static void main(String[] args) {
+
+
+    }
 }

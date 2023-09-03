@@ -1,0 +1,11 @@
+package com.example.demo.bean;
+
+import com.example.demo.common.validation.EnumString;
+import lombok.Data;
+
+@Data
+public class  UserVO {
+
+    @EnumString(constStrings={"1", "0"})
+    private String sex;
+}

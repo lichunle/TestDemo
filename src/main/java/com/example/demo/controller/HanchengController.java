@@ -1,9 +1,13 @@
 package com.example.demo.controller;
 
 //import com.example.demo.service.PeoService;
+import com.example.demo.bean.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.validation.Valid;
 
 
 @RestController
@@ -16,7 +20,7 @@ public class HanchengController {
 //    private PeoService peoService;
 
     @RequestMapping("/hello")
-    public String hello() {
+    public String hello(@RequestBody @Valid UserVO userVO) {
 //        peoService.queryList();
         return "welcome!!!";
     }

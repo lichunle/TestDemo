@@ -24,7 +24,8 @@
 		<commons-lang3.version>3.9</commons-lang3.version>
 		<commons-pool2.version>2.5.0</commons-pool2.version>
 		<sharding-sphere.version>4.0.0-RC2</sharding-sphere.version>
-		<mybatis-plus.version>3.3.2</mybatis-plus.version>
+<!--		<mybatis-plus.version>3.3.2</mybatis-plus.version>-->
+		<mybatis-plus.version>3.4.1</mybatis-plus.version>
 	</properties>
 
 	<dependencies>

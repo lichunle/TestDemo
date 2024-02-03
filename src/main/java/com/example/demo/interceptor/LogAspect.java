@@ -29,7 +29,7 @@ public class LogAspect {
     public void invokeBefore(JoinPoint point) {
         String traceId = UUID.randomUUID().toString().replace("-", "");
         if (canPrintLog(point)) {
-            log.info("request url: {}, execute method: {},header: {}, requestParams: {}", getRequestUrl(),
+            log.info("Request url: {}, execute method: {},header: {}, requestParams: {}", getRequestUrl(),
                     getMethodName(point), getRequestHeaderInfo(), getRequestParams(point));
         }
     }
@@ -38,7 +38,7 @@ public class LogAspect {
     public void invokeAfter(JoinPoint point, Object returnValue) {
         String realClassName = getRealClassName(point);
         if (canPrintLog(point)) {
-            log.info("invoke class: {}, execute method: {}, response:{}", realClassName, getMethodName(point),
+            log.info("Invoke class: {}, execute method: {}, response:{}", realClassName, getMethodName(point),
                     returnValue);
         }
     }

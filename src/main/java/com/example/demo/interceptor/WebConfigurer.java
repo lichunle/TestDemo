@@ -12,7 +12,7 @@ public class WebConfigurer extends WebMvcConfigurerAdapter {
 //    @Override
 //    public void addInterceptors(InterceptorRegistry registry) {
 //
-//        registry.addInterceptor(new LogInterceptor()).addPathPatterns("/**");
+//        registry.addInterceptor(new RestInterceptor());
 //        super.addInterceptors(registry);
 //    }
 }
